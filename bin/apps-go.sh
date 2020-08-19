@@ -4,7 +4,7 @@
 dir="$(dirname "$0")"
 . $dir"/_includes.sh"
 
-command -v /usr/local/go/bin/go >/dev/null 2>&1 || fail "Go is NOT installed!"
+command -v go >/dev/null 2>&1 || fail "Go is NOT installed!"
 
 info 'Installing Go apps ...\n'
 sleep 2
@@ -12,13 +12,19 @@ sleep 2
 export GO111MODULE=on
 
 info "lazydocker"
-/usr/local/go/bin/go get github.com/jesseduffield/lazydocker
+go get github.com/jesseduffield/lazydocker
+echo -en "\n"
 lazydocker --version
+echo -en "\n"
 
 info "lazygit"
-/usr/local/go/bin/go get github.com/jesseduffield/lazygit
+go get github.com/jesseduffield/lazygit
+echo -en "\n"
 lazygit --version
+echo -en "\n"
 
 info "rclone"
-/usr/local/go/bin/go get github.com/rclone/rclone
+go get github.com/rclone/rclone
+echo -en "\n"
 rclone --version
+echo -en "\n"
