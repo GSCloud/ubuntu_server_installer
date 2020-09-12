@@ -14,10 +14,10 @@ rm -rf /usr/local/go
 
 info 'Installing new Go ...'
 
-T="/tmp/go1.15.1.tar.gz"
+T="/tmp/go1.15.2.tar.gz"
 if [ ! -f "$T" ]; then
   sleep 2
-  wget -O $T https://dl.google.com/go/go1.15.1.linux-amd64.tar.gz
+  wget -O $T 'https://dl.google.com/go/go1.15.2.linux-amd64.tar.gz'
 fi
 
 tar -C /usr/local -xzf $T
