@@ -1,5 +1,13 @@
 # Ubuntu Server Installer
 
-Ubuntu 18.04.4 amd64 tested
+Tested on Ubuntu 18.04+ amd64.
 
-Author: Filip Oščádal aka Fred Brooker <oscadal@gscloud.cz>
+## Usage
+
+* bin/ ➡️ install scripts
+* crypt/ ➡️ OpenSSL encryption example
+
+Github: [https://github.com/GSCloud/ubuntu_server_installer]  
+BitBucket: [https://bitbucket.org/gscloud/ubuntu_server_installer]
+
+Author: Filip Oščádal aka Fred Brooker 💌 <oscadal@gscloud.cz>
