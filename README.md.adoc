@@ -1,13 +1,13 @@
 == Ubuntu Server Installer
 
-Tested on Ubuntu 18.04+ amd64.
+Github: [https://github.com/GSCloud/ubuntu_server_installer] +
+BitBucket: [https://bitbucket.org/gscloud/ubuntu_server_installer]
 
 === Usage
 
 * bin/ ➡️ install scripts
 * crypt/ ➡️ OpenSSL encryption example
 
-Github: [https://github.com/GSCloud/ubuntu_server_installer] +
-BitBucket: [https://bitbucket.org/gscloud/ubuntu_server_installer]
+Tested on Ubuntu 18.04+ amd64.
 
 Author: Filip Oščádal aka Fred Brooker 💌 oscadal@gscloud.cz
