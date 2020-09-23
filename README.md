@@ -5,8 +5,8 @@ BitBucket: [https://bitbucket.org/gscloud/ubuntu_server_installer]
 
 ## Usage
 
-* bin/ ➡️ install scripts
-* crypt/ ➡️ OpenSSL encryption example
+* bin/ ➡️ many installation scripts
+* crypt/ ➡️ OpenSSL AES-256 encryption demo
 
 Tested on Ubuntu 18.04+ amd64.
 

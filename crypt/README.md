@@ -5,4 +5,6 @@
 
 demo password is: **test**
 
-Author: Filip Oščádal aka Fred Brooker <oscadal@gscloud.cz>
+Tested on Ubuntu 18.04+ amd64.
+
+Author: Filip Oščádal aka Fred Brooker 💌 <oscadal@gscloud.cz>
