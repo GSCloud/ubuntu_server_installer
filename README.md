@@ -5,8 +5,10 @@ BitBucket: [https://bitbucket.org/gscloud/ubuntu_server_installer]
 
 ## Usage
 
-* bin/ ➡️ many installation scripts
-* crypt/ ➡️ OpenSSL AES-256 encryption demo
+* run **make** to execute common scripts
+* *bin/* ➡️ all installation scripts
+* *crypt/* ➡️ OpenSSL AES-256 encryption demo
+* *dist/* ➡️ various files for new server installation
 
 Tested on Ubuntu 18.04+ amd64.
 
