@@ -7,12 +7,7 @@ dir="$(dirname "$0")"
 if [ "$(id -u)" != "0" ]; then fail "This script must be run as root!"; fi
 command -v wget >/dev/null 2>&1 || fail "wget is NOT installed!"
 
-info 'Removing old Go ...\n'
-sleep 2
-
-rm -rf /usr/local/go
-
-info 'Installing new Go ...'
+info 'Downloading new Go ...'
 
 T="/tmp/go1.15.2.tar.gz"
 if [ ! -f "$T" ]; then
@@ -20,7 +15,16 @@ if [ ! -f "$T" ]; then
   wget -O $T 'https://dl.google.com/go/go1.15.2.linux-amd64.tar.gz'
 fi
 
+info 'Removing old Go ...'
+sleep 2
+
+rm -rf /usr/local/go
+
+info 'Installing Go ...'
+
 tar -C /usr/local -xzf $T
 /usr/local/go/bin/go version
 
 yes_or_no "Remove temporary file?" && rm -f $T
+
+exit 0

@@ -6,7 +6,6 @@ dir="$(dirname "$0")"
 
 FILES="id_rsa id_rsa.pub"
 
-
 if [ -z "${PASS}" ]; then
   info "Manage keys (interactive) ..."
   read -s -p "Enter password:" PASS
