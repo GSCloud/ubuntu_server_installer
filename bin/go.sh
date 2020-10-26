@@ -9,7 +9,7 @@ command -v wget >/dev/null 2>&1 || fail "wget is NOT installed!"
 
 info 'Downloading new Go ...'
 
-T="/tmp/go1.15.2.tar.gz"
+T="/tmp/go1.15.3.tar.gz"
 if [ ! -f "$T" ]; then
   sleep 2
   wget -O $T 'https://dl.google.com/go/go1.15.3.linux-amd64.tar.gz'
