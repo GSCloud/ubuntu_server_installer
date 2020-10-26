@@ -12,7 +12,7 @@ info 'Downloading new Go ...'
 T="/tmp/go1.15.2.tar.gz"
 if [ ! -f "$T" ]; then
   sleep 2
-  wget -O $T 'https://dl.google.com/go/go1.15.2.linux-amd64.tar.gz'
+  wget -O $T 'https://dl.google.com/go/go1.15.3.linux-amd64.tar.gz'
 fi
 
 info 'Removing old Go ...'
