@@ -11,7 +11,7 @@ info 'Preparing installation ...'
 apt-get install -yq software-properties-common language-pack-en-base
 LC_ALL=en_US.UTF-8 add-apt-repository -y ppa:ondrej/php
 
-apt-get update -yq
+apt-get update -yqq
 
 info 'Installing PHP 8.0 ...'
 
