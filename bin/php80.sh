@@ -13,13 +13,13 @@ LC_ALL=en_US.UTF-8 add-apt-repository -y ppa:ondrej/php
 
 apt-get update -yq
 
-info 'Installing PHP 7.4 ...'
+info 'Installing PHP 8.0 ...'
 
-apt-get install -y libapache2-mod-php7.4 openssl php-imagick php-redis \
-  php7.4 php7.4-cli php7.4-curl php7.4-gd php7.4-intl php7.4-json php7.4-mbstring \
-  php7.4-mysql php7.4-readline php7.4-pgsql php7.4-sqlite3 php7.4-xml php7.4-zip
+apt-get install -y libapache2-mod-php8.0 openssl php-imagick php-redis \
+  php8.0 php8.0-cli php8.0-curl php8.0-gd php8.0-intl php8.0-mbstring \
+  php8.0-mysql php8.0-readline php8.0-pgsql php8.0-sqlite3 php8.0-xml php8.0-zip
 
-sudo update-alternatives --set php /usr/bin/php7.4
+sudo update-alternatives --set php /usr/bin/php8.0
 
 info 'Restarting Apache ...'
 
