@@ -23,7 +23,7 @@ sudo update-alternatives --set php /usr/bin/php7.4
 
 info 'Restarting Apache ...'
 
-a2enmod cloudflare expires headers info rewrite ssl status >/dev/null 2>&1
+a2enmod php7.4 cloudflare expires headers info rewrite ssl status >/dev/null 2>&1
 service apache2 restart >/dev/null 2>&1
 
 info "Installation done.\n"
