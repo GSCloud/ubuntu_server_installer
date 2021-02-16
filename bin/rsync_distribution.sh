@@ -16,3 +16,5 @@ if [ -d "../dist" ]; then
 else
   fail 'The DISTRIBUTION folder "dist" is missing!'
 fi
+
+exit 0

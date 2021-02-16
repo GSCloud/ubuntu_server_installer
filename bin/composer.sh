@@ -14,3 +14,5 @@ mv composer.phar /usr/local/bin/composer
 rm -rf ~/.composer
 
 composer -V
+
+exit 0

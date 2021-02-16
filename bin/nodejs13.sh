@@ -5,7 +5,9 @@ dir="$(dirname "$0")"
 . $dir"/_includes.sh"
 
 command -v nodejs >/dev/null 2>&1 || {
-  info "Installing Nodejs ..."
+  info "Installing Node.js ..."
   sudo snap remove node
   sudo snap install node --channel=13/stable --classic
 }
+
+exit 0

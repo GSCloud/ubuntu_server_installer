@@ -5,7 +5,7 @@ dir="$(dirname "$0")"
 . $dir"/_includes.sh"
 
 command -v nodejs >/dev/null 2>&1 || {
-  fail "Installing Nodejs first!"
+  fail "Install Node.js first!"
 }
 
 info 'Installing Gulp ...'
@@ -29,3 +29,5 @@ npm i gulp-uglify
 npm i gulp-util
 
 npm link gulp
+
+exit 0

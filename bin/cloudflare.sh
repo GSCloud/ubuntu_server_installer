@@ -7,7 +7,6 @@ dir="$(dirname "$0")"
 if [ "$(id -u)" != "0" ]; then fail "This script must be run as root!"; fi
 
 info 'Preparing installation ...\n'
-sleep 2
 
 apt-get install -yqq apache2-dev
 
@@ -27,3 +26,5 @@ info 'Restarting Apache ...'
 
 a2enmod cloudflare expires headers info rewrite ssl status >/dev/null 2>&1
 service apache2 restart >/dev/null 2>&1
+
+exit 0

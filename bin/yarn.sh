@@ -10,3 +10,5 @@ command -v yarn >/dev/null 2>&1 || {
   sudo apt-get update
   sudo apt-get install yarn
 }
+
+exit 0

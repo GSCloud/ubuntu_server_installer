@@ -15,3 +15,5 @@ info 'Installing new Docker ...'
 
 snap install docker
 sudo /snap/bin/docker --version
+
+exit 0

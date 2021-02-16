@@ -25,3 +25,5 @@ info 'Setting SSH folder ...'
 mkdir -p ~/.ssh
 chmod 0700 ~/.ssh
 chmod 0600 ~/.ssh/* >/dev/null 2>&1
+
+exit 0

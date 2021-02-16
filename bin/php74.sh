@@ -29,3 +29,5 @@ service apache2 restart >/dev/null 2>&1
 info "Installation done.\n"
 
 php --version
+
+exit 0
