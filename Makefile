@@ -1,9 +1,9 @@
 all: info
 
 info:
-	@echo "\e[1;32m👾 Welcome to Ubuntu Server Installer 👾\n"
+	@echo "\e[1;32m👾 Welcome to Ubuntu Installer 👾\n"
 
-	@echo "🆘 \e[0;1mmake docs\e[0m - rebuild documentation\n"
+	@echo "🆘 \e[0;1mmake docs\e[0m - build documentation\n"
 
 	@echo "🆘 \e[0;1mmake node9\e[0m - install Node.js 9"
 	@echo "🆘 \e[0;1mmake node10\e[0m - install Node.js 10"
@@ -12,14 +12,14 @@ info:
 	@echo "🆘 \e[0;1mmake node14\e[0m - install Node.js 14\n"
 
 	@echo "🆘 \e[0;1mmake php\e[0m - install PHP 8.0"
-	@echo "🆘 \e[0;1mmake php74\e[0m - install older PHP 7.4"
+	@echo "🆘 \e[0;1mmake php74\e[0m - install PHP 7.4"
 	@echo "🆘 \e[0;1mmake composer\e[0m - install PHP Composer\n"
 
-	@echo "🆘 \e[0;1mmake go\e[0m - install Go lang"
-	@echo "🆘 \e[0;1mmake ruby\e[0m - install Ruby lang"
-	@echo "🆘 \e[0;1mmake rust\e[0m - install Rust lang"
+	@echo "🆘 \e[0;1mmake go\e[0m - install Go language"
+	@echo "🆘 \e[0;1mmake ruby\e[0m - install Ruby language"
+	@echo "🆘 \e[0;1mmake rust\e[0m - install Rust language"
 	@echo "🆘 \e[0;1mmake goapps\e[0m - install Go apps"
-	@echo "🆘 \e[0;1mmake rustapps\e[0m - (re)install Rust apps\n"
+	@echo "🆘 \e[0;1mmake rustapps\e[0m - install Rust apps\n"
 
 docs:
 	@bash ./bin/create_pdf.sh
