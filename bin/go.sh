@@ -27,4 +27,7 @@ tar -C /usr/local -xzf $T
 
 yes_or_no "Remove temporary file?" && rm -f $T
 
+source $HOME/.profile
+info 'Remember to add: "export PATH=$PATH:/usr/local/go/bin" to your profile!'
+
 exit 0

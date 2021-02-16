@@ -17,6 +17,7 @@ info:
 
 	@echo "🆘 \e[0;1mmake go\e[0m - install Go lang"
 	@echo "🆘 \e[0;1mmake ruby\e[0m - install Ruby lang"
+	@echo "🆘 \e[0;1mmake rust\e[0m - install Rust lang"
 	@echo "🆘 \e[0;1mmake goapps\e[0m - install Go apps"
 	@echo "🆘 \e[0;1mmake rustapps\e[0m - (re)install Rust apps\n"
 
@@ -28,6 +29,9 @@ go:
 
 ruby:
 	@sudo bash ./bin/ruby.sh
+
+rust:
+	@sudo bash ./bin/rust.sh
 
 php:
 	@sudo bash ./bin/php80.sh

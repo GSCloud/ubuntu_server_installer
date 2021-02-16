@@ -48,3 +48,5 @@ rm /sites >/dev/null 2>&1
 ln -s /etc/apache2/sites-available/ /sites
 rm /logs >/dev/null 2>&1
 ln -s /var/log/apache2/ /logs
+
+exit 0
