@@ -24,9 +24,9 @@ echo -en "\n$(rclone --version)\n\n"
 
 if groups $(whoami) | grep -q '\bdocker\b'
 then
-    echo "You are member of the docker group."
+    info "You are member of the docker group."
 else
-    echo "You should add yourself into the docker group."
+    warn "You should add yourself into the docker group."
 fi
 
 exit 0

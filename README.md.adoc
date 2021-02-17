@@ -5,11 +5,14 @@ BitBucket: [https://bitbucket.org/gscloud/ubuntu_server_installer]
 
 === Usage
 
-* run *make* to execute common scripts
-* _bin/_ ➡️ all installation scripts
-* _crypt/_ ➡️ OpenSSL AES-256 encryption demo
-* _dist/_ ➡️ various files for new server installation
+* *make* -> CLI help
 
 Tested on Ubuntu 18.04+ amd64.
+
+=== Structure
+
+* _bin/_ - installation scripts
+* _crypt/_ - OpenSSL AES-256 encryption demo
+* _dist/_ - various distribution files for new server installation
 
 Author: Filip Oščádal aka Fred Brooker 💌 oscadal@gscloud.cz
