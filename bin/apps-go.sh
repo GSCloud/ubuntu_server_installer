@@ -38,3 +38,5 @@ echo -en "\n$(hugo version)\n\n"
 info fac
 go get github.com/mkchoi212/fac
 echo -en "\n$(fac --version)\n\n"
+
+exit 0
