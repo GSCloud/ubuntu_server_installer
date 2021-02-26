@@ -10,11 +10,11 @@ command -v cargo >/dev/null 2>&1 || fail "Cargo is NOT installed!"
 info 'Installing Rust apps\n'
 
 info "bat"
-cargo install bat
+cargo install bat || fail Build failed.
 echo -en "\n$(bat --version)\n\n"
 
 info "wrangler"
-cargo install wrangler
+cargo install wrangler || fail Build failed.
 echo -en "\n$(wrangler --version)\n\n"
 
 exit 0
