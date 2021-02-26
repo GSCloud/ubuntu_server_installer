@@ -5,28 +5,36 @@ dir="$(dirname "$0")"
 . $dir"/_includes.sh"
 
 command -v go >/dev/null 2>&1 || fail "Go is NOT installed!"
-
 export GO111MODULE=on
 
-info 'Installing Go apps\n'
+info "Installing Go apps"
+if [ -z ${GOPATH+x} ]; then fail "GOPATH is unset"; else info "GOPATH is set to '$GOPATH'\n"; fi
 
-info "lazydocker"
+info lazydocker
 go get github.com/jesseduffield/lazydocker
 echo -en "\n$(lazydocker --version)\n\n"
 
-info "lazygit"
+info lazygit
 go get github.com/jesseduffield/lazygit
 echo -en "\n$(lazygit --version)\n\n"
 
-info "rclone"
+info rclone
 go get github.com/rclone/rclone
 echo -en "\n$(rclone --version)\n\n"
 
-if groups $(whoami) | grep -q '\bdocker\b'
-then
-    info "You are member of the docker group."
-else
-    warn "You should add yourself into the docker group."
-fi
+info vuls
+mkdir -p $GOPATH/src
+cd $GOPATH/src
+[ -d "vuls" ] || git clone https://github.com/future-architect/vuls
+cd vuls
+git pull
+make && make install && info "vuls is installed\n\n"
 
-exit 0
+info hugo
+mkdir -p $GOPATH/src
+cd $GOPATH/src
+[ -d "hugo" ] || git clone https://github.com/gohugoio/hugo.git
+cd hugo
+git pull
+go install
+echo -en "\n$(hugo version)\n\n"
