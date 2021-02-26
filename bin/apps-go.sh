@@ -22,14 +22,6 @@ info rclone
 go get github.com/rclone/rclone
 echo -en "\n$(rclone --version)\n\n"
 
-#info vuls
-#mkdir -p $GOPATH/src
-#cd $GOPATH/src
-#[ -d "vuls" ] || git clone https://github.com/future-architect/vuls
-#cd vuls
-#git pull
-#make && make install && info "vuls is installed\n\n"
-
 info cointop
 go get github.com/miguelmota/cointop
 echo -en "\n$(cointop --version)\n\n"
@@ -42,3 +34,7 @@ cd hugo
 git pull
 go install
 echo -en "\n$(hugo version)\n\n"
+
+info fac
+go get github.com/mkchoi212/fac
+echo -en "\n$(fac --version)\n\n"
