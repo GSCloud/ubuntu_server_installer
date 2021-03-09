@@ -1,8 +1,8 @@
 #!/bin/bash
-#@author Filip Oščádal <oscadal@gscloud.cz>
+#@author Filip Oščádal <git@gscloud.cz>
 
 dir="$(dirname "$0")"
-. $dir"/_includes.sh"
+. "$dir/_includes.sh"
 
 if [ "$(id -u)" != "0" ]; then fail "This script must be run as root!"; fi
 command -v wget >/dev/null 2>&1 || fail "wget is NOT installed!"
@@ -14,7 +14,7 @@ if [ ! -f "$T" ]; then
   wget -O $T 'https://dl.google.com/go/go1.16.linux-amd64.tar.gz'
 fi
 
-info 'Removing old Go'
+info 'Removing Go'
 rm -rf /usr/local/go
 
 info 'Installing Go'

@@ -1,8 +1,8 @@
 #!/bin/bash
-#@author Filip Oščádal <oscadal@gscloud.cz>
+#@author Filip Oščádal <git@gscloud.cz>
 
 dir="$(dirname "$0")"
-. $dir"/_includes.sh"
+. "$dir/_includes.sh"
 
 command -v go >/dev/null 2>&1 || fail "Go is NOT installed!"
 export GO111MODULE=on

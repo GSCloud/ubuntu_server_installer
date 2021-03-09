@@ -1,8 +1,8 @@
 #!/bin/bash
-#@author Filip Oščádal <oscadal@gscloud.cz>
+#@author Filip Oščádal <git@gscloud.cz>
 
 dir="$(dirname "$0")"
-. $dir"/_includes.sh"
+. "$dir/_includes.sh"
 
 command -v rustc >/dev/null 2>&1 || fail "Rust is NOT installed!"
 command -v cargo >/dev/null 2>&1 || fail "Cargo is NOT installed!"

@@ -1,6 +1,17 @@
 #!/bin/bash
+#@author Filip Oščádal <git@gscloud.cz>
 
-command -v docker >/dev/null 2>&1 || { echo "Docker is NOT installed!"; exit;}
+dir="$(dirname "$0")"
+. "$dir/_includes.sh"
 
-find . -type f -iname "*.md" -exec echo "{}" \; -exec docker run --rm -v "$(pwd)":/data pandoc/core -f markdown -t asciidoc -i {} -o "{}.adoc" \;
-find . -type f -iname "*.adoc" -exec echo "{}" \; -exec docker run --rm -v $(pwd):/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf -a allow-uri-read -d book "{}" \;
+command -v docker >/dev/null 2>&1 || fail "Docker is NOT installed!"
+
+# MarkDown -> ADOC
+find . -iname "*.md" -exec echo "Converting {} to ADOC" \; \
+    -exec docker run --rm -u $(id -u ${USER}):$(id -g ${USER}) -v "$(pwd)":/data pandoc/core -f markdown -t asciidoc -i {} -o "{}.adoc" \;
+
+# ADOC -> PDF
+find . -iname "*.adoc" -exec echo "Converting {} to PDF" \; \
+    -exec docker run --rm -u $(id -u ${USER}):$(id -g ${USER}) -v $(pwd):/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf -a allow-uri-read -d book "{}" \;
+
+exit 0

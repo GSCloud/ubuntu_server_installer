@@ -1,14 +1,12 @@
 #!/bin/bash
-#@author Filip Oščádal <oscadal@gscloud.cz>
+#@author Filip Oščádal <git@gscloud.cz>
 
 dir="$(dirname "$0")"
-. $dir"/_includes.sh"
+. "$dir/_includes.sh"
 
-command -v nodejs >/dev/null 2>&1 || {
-  fail "Install Node.js first!"
-}
+command -v nodejs >/dev/null 2>&1 || fail "Install Node.js first!"
 
-info 'Installing Gulp ...'
+info 'Installing Gulp'
 
 command -v gulp >/dev/null 2>&1 || {
   sudo npm i -g npm
@@ -16,7 +14,7 @@ command -v gulp >/dev/null 2>&1 || {
   sudo npm i -g gulp
 }
 
-info 'Installing Gulp plugins ...'
+info 'Installing Gulp plugins'
 
 npm i gulp-autoprefixer
 npm i gulp-concat

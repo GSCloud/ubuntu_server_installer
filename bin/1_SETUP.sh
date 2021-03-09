@@ -1,12 +1,12 @@
 #!/bin/bash
-#@author Filip Oščádal <oscadal@gscloud.cz>
+#@author Filip Oščádal <git@gscloud.cz>
 
 dir="$(dirname "$0")"
-. $dir"/_includes.sh"
+. "$dir/_includes.sh"
 
 if [ "$(id -u)" != "0" ]; then fail "This script must be run as root!"; fi
 
-info 'Adding SWAP ...'
+info 'Adding SWAP'
 
 grep swap /etc/fstab -q >/dev/null 2>&1
 if [ $? -eq 1 ]; then
@@ -20,7 +20,7 @@ else
   warn 'SWAP is already activated'
 fi
 
-info 'Setting SSH folder ...'
+info 'Setting SSH folder'
 
 mkdir -p ~/.ssh
 chmod 0700 ~/.ssh

@@ -1,5 +1,5 @@
 #!/bin/bash
-#@author Filip Oščádal <oscadal@gscloud.cz>
+#@author Filip Oščádal <git@gscloud.cz>
 
 TS=`date +"%T"`
 LOG_FILE="/tmp/ubuntu-server-installer-$TS.log"

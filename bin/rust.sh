@@ -16,7 +16,6 @@ if [ "$KSH_VERSION" = 'Version JM 93t+ 2010-03-05' ]; then
     exit 1
 fi
 
-
 set -u
 
 # If RUSTUP_UPDATE_ROOT is unset or empty, default it.
