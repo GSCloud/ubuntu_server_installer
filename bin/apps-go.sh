@@ -26,15 +26,6 @@ info cointop
 go get github.com/miguelmota/cointop || fail Build failed.
 echo -en "\n$(cointop --version)\n\n"
 
-info hugo
-mkdir -p $GOPATH/src
-cd $GOPATH/src
-[ -d "hugo" ] || git clone https://github.com/gohugoio/hugo.git
-cd hugo
-git pull
-go install || fail Build failed.
-echo -en "\n$(hugo version)\n\n"
-
 info fac
 go get github.com/mkchoi212/fac || fail Build failed.
 echo -en "\n$(fac --version)\n\n"
