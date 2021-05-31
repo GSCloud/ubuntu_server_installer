@@ -32,7 +32,7 @@ locale-gen en_US.UTF-8
 
 if [ ! -d "/etc/webmin" ]; then
   info 'Installing Webmin'
-  wget -O /tmp/webmin.deb http://prdownloads.sourceforge.net/webadmin/webmin_1.973_all.deb
+  wget -O /tmp/webmin.deb http://prdownloads.sourceforge.net/webadmin/webmin_1.974_all.deb
   dpkg -i /tmp/webmin.deb
   apt-get install -fqq
 fi
