@@ -17,4 +17,8 @@ info "wrangler"
 cargo install wrangler || fail Build failed.
 echo -en "\n$(wrangler --version)\n\n"
 
+info "fd"
+cargo install fd-find
+echo -en "\n$(fd --version)\n\n"
+
 exit 0
