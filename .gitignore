@@ -1,0 +1,14 @@
+*.bak
+*.tar
+*.tgz
+*.zip
+*~
+.DS_Store
+.Trash-1000
+Thumbs.db
+keys/id_rsa
+keys/id_rsa.pub
+keys/params.sh
+keys/plainpassword.txt
+node_modules/
+package-lock.json

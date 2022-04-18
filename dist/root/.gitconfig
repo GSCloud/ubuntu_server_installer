@@ -1,0 +1,16 @@
+[user]
+	email = f@mxd.cz
+	name = Filip Oščádal
+[push]
+	default = simple
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	unstage = reset HEAD --
+	last = log -1 HEAD
+
+[core]
+	editor = nano
+[merge]
+	tool = kdiff3
