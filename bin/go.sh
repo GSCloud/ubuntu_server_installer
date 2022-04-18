@@ -24,6 +24,6 @@ tar -C /usr/local -xzf $T
 
 yes_or_no "Remove temporary file?" && rm -f $T
 
-info "\nRemember to add these lines to your profile:\n\nexport PATH=$PATH:/usr/local/go/bin\nexport GOROOT=/usr/local/go\nexport GOPATH=$HOME/go\n"
+info "Remember to add these lines to your profile:\n\nexport PATH=$PATH:/usr/local/go/bin\nexport GOROOT=/usr/local/go\nexport GOPATH=$HOME/go\n"
 
 exit 0
