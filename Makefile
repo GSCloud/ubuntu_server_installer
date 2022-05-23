@@ -28,7 +28,7 @@ go:
 ruby:
 	@sudo bash ./bin/ruby.sh
 rust:
-	@sudo bash ./bin/rust.sh
+	@bash ./bin/rust.sh
 php:
 	@sudo bash ./bin/php81.sh
 php80:
