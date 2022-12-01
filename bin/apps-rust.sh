@@ -9,16 +9,32 @@ command -v cargo >/dev/null 2>&1 || fail "Cargo is NOT installed!"
 
 info 'Installing Rust apps\n'
 
-info "bat"
-cargo install bat --force || fail Build failed.
-echo -en "\n$(bat --version)\n\n"
+command -v bat >/dev/null 2>&1 && echo -en "bat\n$(bat --version)\n\n"
+command -v xsv >/dev/null 2>&1 && echo -en "xsv\n$(xsv --version)\n\n"
+command -v fd >/dev/null 2>&1 && echo -en "fd\n$(fd --version)\n\n"
+command -v bandwhich >/dev/null 2>&1 && echo -en "bandwhich\n$(bandwhich --version)\n\n"
+command -v exa >/dev/null 2>&1 && echo -en "exa\n$(exa --version)\n\n"
 
-info "wrangler"
-cargo install wrangler --force || fail Build failed.
-echo -en "\n$(wrangler --version)\n\n"
+yes_or_no "Stop installation?" && exit 0
+
+info "bat"
+cargo install bat || fail build failed
+echo -en "$(bat --version)\n\n"
+
+info "xsv"
+cargo install xsv || fail build failed
+echo -en "$(xsv --version)\n\n"
 
 info "fd"
-cargo install fd-find --force || fail Build failed.
-echo -en "\n$(fd --version)\n\n"
+cargo install fd-find || fail build failed
+echo -en "$(fd --version)\n\n"
+
+info "bandwhich"
+cargo install bandwhich || fail build failed
+echo -en "$(bandwhich --version)\n\n"
+
+info "exa"
+cargo install exa || fail build failed
+echo -en "$(exa --version)\n\n"
 
 exit 0
