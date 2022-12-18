@@ -11,8 +11,9 @@ info:
 	@echo "🆘 \e[0;1mmake node12\e[0m - install Node.js 12 (snap)"
 	@echo "🆘 \e[0;1mmake node14\e[0m - install Node.js 14 (snap)"
 	@echo "🆘 \e[0;1mmake node16\e[0m - install Node.js 16 (snap)"
-	@echo "🆘 \e[0;1mmake php\e[0m - install PHP 8.1 (repo)"
+	@echo "🆘 \e[0;1mmake php\e[0m - install PHP 8.2 (repo)"
 	@echo "🆘 \e[0;1mmake php80\e[0m - install PHP 8.0 (repo)"
+	@echo "🆘 \e[0;1mmake php81\e[0m - install PHP 8.1 (repo)"
 	@echo "🆘 \e[0;1mmake php74\e[0m - install PHP 7.4 (repo)"
 	@echo "🆘 \e[0;1mmake composer\e[0m - install PHP Composer"
 	@echo "🆘 \e[0;1mmake go\e[0m - install Go lang (online)"
@@ -30,6 +31,8 @@ ruby:
 rust:
 	@bash ./bin/rust.sh
 php:
+	@sudo bash ./bin/php82.sh
+php81:
 	@sudo bash ./bin/php81.sh
 php80:
 	@sudo bash ./bin/php80.sh
