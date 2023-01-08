@@ -7,7 +7,7 @@ dir="$(dirname "$0")"
 command -v rustc >/dev/null 2>&1 || fail "Rust is NOT installed!"
 command -v cargo >/dev/null 2>&1 || fail "Cargo is NOT installed!"
 
-info 'Installing Rust apps\n'
+info 'Checking existing Rust apps\n'
 
 command -v bat >/dev/null 2>&1 && echo -en "bat\n$(bat --version)\n\n"
 command -v xsv >/dev/null 2>&1 && echo -en "xsv\n$(xsv --version)\n\n"

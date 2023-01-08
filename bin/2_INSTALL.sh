@@ -19,7 +19,7 @@ apt-get install -y apache2 apache2-dev curl dkms git-core gitk haveged htop ipta
   language-pack-en language-pack-en-base man mc nano ntp openssl p7zip software-properties-common \
   traceroute tree ufw whois
 
-info 'Updating APT again'
+info 'Updating APT'
 
 dpkg --configure -a
 apt-get update -qq
