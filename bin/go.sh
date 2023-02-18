@@ -9,9 +9,9 @@ command -v wget >/dev/null 2>&1 || fail "wget is NOT installed!"
 
 info 'Downloading Go'
 
-T="/tmp/go1.19.4.tar.gz"
+T="/tmp/go1.20.1.tar.gz"
 if [ ! -f "$T" ]; then
-  wget -O $T 'https://dl.google.com/go/go1.19.4.linux-amd64.tar.gz'
+  wget -O $T 'https://dl.google.com/go/go1.20.1.linux-amd64.tar.gz'
 fi
 
 info 'Removing previous Go'
