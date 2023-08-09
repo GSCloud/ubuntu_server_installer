@@ -44,7 +44,6 @@ esac
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
 force_color_prompt=yes
-
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
 	# We have color support; assume it's compliant with Ecma-48
@@ -84,7 +83,7 @@ fi
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
+# ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -93,8 +92,7 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Alias definitions.
-
+# alias definitions
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -114,23 +112,32 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# exports
 export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_MESSAGES=en_US.UTF-8
-
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
-
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin:$HOME/.cargo/bin:$HOME/bin:$HOME/scripts
 
-source ~/.git-prompt.sh
-source ~/.git-completion.bash
+# git
+source $HOME/.git-prompt.sh
+source $HOME/.git-completion.bash
 
-#PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+# cli prompt
 PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\] \[\033[33;1m\]\w\[\033[m\] (\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)) \$ "
 
-df -h | grep -v "/snap"
-echo -e "\n"
-df -hi | grep -v "/snap"
-echo -e "\n"
+# disk free
+alias df='df -h -x"squashfs" -x"tmpfs"'
+
+# Cargo
+if [ -d "$HOME/.cargo/" ]; then
+  source "$HOME/.cargo/env"
+  . "$HOME/.cargo/env"
+fi
+
+# Composer bin
+if [ -d "$HOME/.config/composer/vendor/bin" ]; then
+  export PATH=$PATH:$HOME/.config/composer/vendor/bin
+fi
