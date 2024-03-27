@@ -6,10 +6,8 @@ info:
 	@echo ""
 	@echo "— \e[0;1mmake docs\e[0m - build documentation"
 	@echo "— \e[0;1mmake docker\e[0m - install Docker (snap)"
-	@echo "— \e[0;1mmake node12\e[0m - install Node.js 12 (snap)"
-	@echo "— \e[0;1mmake node14\e[0m - install Node.js 14 (snap)"
-	@echo "— \e[0;1mmake node16\e[0m - install Node.js 16 (snap)"
 	@echo "— \e[0;1mmake node18\e[0m - install Node.js 18 (snap)"
+	@echo "— \e[0;1mmake node20\e[0m - install Node.js 20 (snap)"
 	@echo "— \e[0;1mmake php\e[0m - install PHP 8.2 (repo)"
 	@echo "— \e[0;1mmake php74\e[0m - install PHP 7.4 (repo)"
 	@echo "— \e[0;1mmake php80\e[0m - install PHP 8.0 (repo)"
@@ -47,17 +45,9 @@ goapps:
 	@bash ./bin/apps-go.sh
 rustapps:
 	@bash ./bin/apps-rust.sh
-node9:
-	@bash ./bin/nodejs9.sh
-node10:
-	@bash ./bin/nodejs10.sh
-node12:
-	@bash ./bin/nodejs12.sh
-node14:
-	@bash ./bin/nodejs14.sh
-node16:
-	@bash ./bin/nodejs16.sh
 node18:
 	@bash ./bin/nodejs18.sh
+node20:
+	@bash ./bin/nodejs20.sh
 docker:
 	@sudo bash ./bin/docker.sh
