@@ -32,7 +32,7 @@ locale-gen en_US.UTF-8
 
 if [ ! -d "/etc/webmin" ]; then
   info 'Installing Webmin'
-  wget -O /tmp/webmin.deb http://prdownloads.sourceforge.net/webadmin/webmin_2.105_all.deb
+  wget -O /tmp/webmin.deb http://prdownloads.sourceforge.net/webadmin/webmin_2.202_all.deb
   dpkg -i /tmp/webmin.deb
   apt-get install -fqq
 fi
@@ -49,5 +49,3 @@ ln -s /etc/apache2/sites-available/ /sites
 
 rm /logs >/dev/null 2>&1
 ln -s /var/log/apache2/ /logs
-
-exit 0

@@ -27,5 +27,3 @@ cd ..
 rm -rf rclone
 
 echo -en "rclone\n$(rclone --version)\n"
-
-exit 0

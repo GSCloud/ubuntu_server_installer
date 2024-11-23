@@ -7,6 +7,4 @@ BitBucket: [https://bitbucket.org/gscloud/ubuntu_server_installer]
 
 * **make** -> CLI help
 
-Tested on Ubuntu 22.04+
-
 Author: Fred Brooker 💌 <git@gscloud.cz>

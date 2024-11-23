@@ -9,9 +9,9 @@ command -v wget >/dev/null 2>&1 || fail "wget is NOT installed!"
 
 info 'Downloading Go'
 
-T="/tmp/go1.23.1.tar.gz"
+T="/tmp/go1.23.3.tar.gz"
 if [ ! -f "$T" ]; then
-  wget -O $T 'https://dl.google.com/go/go1.23.1.linux-amd64.tar.gz'
+  wget -O $T 'https://dl.google.com/go/go1.23.3.linux-amd64.tar.gz'
 fi
 
 info 'Removing previous Go'
@@ -25,5 +25,3 @@ tar -C /usr/local -xzf $T
 yes_or_no "Remove temporary file?" && rm -f $T
 
 info "Remember to add these lines to your profile:\n\nexport PATH="'$PATH:/usr/local/go/bin'"\n"'export GOROOT=/usr/local/go\nexport GOPATH=$HOME/go'"\n"
-
-exit 0

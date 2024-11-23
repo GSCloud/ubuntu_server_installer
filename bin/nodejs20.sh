@@ -9,5 +9,3 @@ command -v nodejs >/dev/null 2>&1 || {
   sudo snap remove node
   sudo snap install node --channel=20/stable --classic
 }
-
-exit 0

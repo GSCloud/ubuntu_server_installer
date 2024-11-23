@@ -15,5 +15,3 @@ find . -iname "*.md" \
 find . -iname "*.adoc" \
     -exec echo "Converting {} to PDF" \; \
     -exec docker run --rm -v $(pwd):/documents/ asciidoctor/docker-asciidoctor:latest asciidoctor-pdf -a allow-uri-read -d book "{}" \;
-
-exit 0

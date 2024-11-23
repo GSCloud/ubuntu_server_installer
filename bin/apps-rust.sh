@@ -36,5 +36,3 @@ echo -en "$(bandwhich --version)\n\n"
 info "exa"
 cargo install exa --force || fail build failed
 echo -en "$(exa --version)\n\n"
-
-exit 0

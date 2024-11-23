@@ -25,12 +25,10 @@ update-alternatives --set php /usr/bin/php8.0
 
 info 'Adding modules and Restarting Apache'
 
-a2dismod php7.4 php8.1
+a2dismod php7.4 php8.1 php8.2 php8.3 php8.4
 a2enmod php8.0 cloudflare expires headers info rewrite ssl status >/dev/null 2>&1
 service apache2 restart >/dev/null 2>&1
 
 info "Installation done."
 
 php --version
-
-exit 0

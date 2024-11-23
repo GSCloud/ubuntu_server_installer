@@ -13,16 +13,16 @@ apt-get update -yq
 
 info 'Installing PHP 8.3'
 
-apt-get install -y libapache2-mod-php8.3 openssl php-imagick php-redis \
-  php8.3 php8.3-cli php8.3-curl php8.3-gd php8.3-intl php8.3-mbstring \
-  php8.3-mysql php8.3-readline php8.3-pgsql php8.3-sqlite3 php8.3-xml php8.3-zip php8.3-curl
+apt-get install -y libapache2-mod-php8.4 openssl php-imagick php-redis \
+  php8.4 php8.4-cli php8.4-curl php8.4-gd php8.4-intl php8.4-mbstring \
+  php8.4-mysql php8.4-readline php8.4-pgsql php8.4-sqlite3 php8.4-xml php8.4-zip php8.4-curl
 
-update-alternatives --set php /usr/bin/php8.3
+update-alternatives --set php /usr/bin/php8.4
 
 info 'Adding modules and Restarting Apache'
 
-a2dismod php7.4 php8.0 php8.1 php8.2 php8.4
-a2enmod php8.3 cloudflare expires headers info rewrite ssl status >/dev/null 2>&1
+a2dismod php7.4 php8.0 php8.1 php8.2 php8.3
+a2enmod php8.4 cloudflare expires headers info rewrite ssl status >/dev/null 2>&1
 service apache2 restart >/dev/null 2>&1
 
 info "Installation done."

@@ -16,5 +16,3 @@ if [ -f "composer.phar" ]; then
 fi
 
 composer -V
-
-exit 0
