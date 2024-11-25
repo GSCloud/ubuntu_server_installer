@@ -14,6 +14,7 @@ command -v xsv >/dev/null 2>&1 && echo -en "xsv\n$(xsv --version)\n\n"
 command -v fd >/dev/null 2>&1 && echo -en "fd\n$(fd --version)\n\n"
 command -v bandwhich >/dev/null 2>&1 && echo -en "bandwhich\n$(bandwhich --version)\n\n"
 command -v exa >/dev/null 2>&1 && echo -en "exa\n$(exa --version)\n\n"
+command -v kuma >/dev/null 2>&1 && echo -en "kuma-cli\n$(kuma --version)\n\n"
 
 yes_or_no "Stop installation?" && exit 0
 
@@ -36,3 +37,7 @@ echo -en "$(bandwhich --version)\n\n"
 info "exa"
 cargo install exa --force || fail build failed
 echo -en "$(exa --version)\n\n"
+
+info "kuma"
+cargo install kuma-cli --force || fail build failed
+echo -en "$(kuma --version)\n\n"

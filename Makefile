@@ -63,6 +63,3 @@ node22:
 	@bash ./bin/nodejs22.sh
 node24:
 	@bash ./bin/nodejs24.sh
-
-docker:
-	@sudo bash ./bin/docker.sh
