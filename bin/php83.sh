@@ -26,5 +26,4 @@ a2enmod php8.3 cloudflare expires headers info rewrite ssl status >/dev/null 2>&
 service apache2 restart >/dev/null 2>&1
 
 info "Installation done."
-
 php --version
