@@ -7,11 +7,14 @@ dir="$(dirname "$0")"
 if [ "$(id -u)" != "0" ]; then fail "This script must be run as root!"; fi
 command -v wget >/dev/null 2>&1 || fail "wget is NOT installed!"
 
-info 'Downloading Go'
+V="go1.23.6"
 
-T="/tmp/go1.23.4.tar.gz"
+info "Downloading $V"
+sleep 3
+
+T="/tmp/$V.tar.gz"
 if [ ! -f "$T" ]; then
-  wget -O $T 'https://dl.google.com/go/go1.23.4.linux-amd64.tar.gz'
+  wget -O $T "https://dl.google.com/go/$V.linux-amd64.tar.gz"
 fi
 
 info 'Removing previous Go'
