@@ -7,10 +7,17 @@ dir="$(dirname "$0")"
 if [ "$(id -u)" != "0" ]; then fail "This script must be run as root!"; fi
 command -v wget >/dev/null 2>&1 || fail "wget is NOT installed!"
 
-V="go1.24.3"
+V="go1.24.4"
 
-info "Downloading $V"
-sleep 3
+info "Downloading $V\n"
+
+echo "- waiting for 3 s"
+echo -en "."
+sleep 1
+echo -en "."
+sleep 1
+echo -en "."
+sleep 1
 
 T="/tmp/$V.tar.gz"
 if [ ! -f "$T" ]; then

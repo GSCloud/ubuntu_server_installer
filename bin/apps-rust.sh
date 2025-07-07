@@ -9,12 +9,11 @@ command -v cargo >/dev/null 2>&1 || fail "Cargo is NOT installed!"
 
 info 'Checking existing Rust apps\n'
 
-command -v bat >/dev/null 2>&1 && echo -en "bat\n$(bat --version)\n\n"
-command -v xsv >/dev/null 2>&1 && echo -en "xsv\n$(xsv --version)\n\n"
-command -v fd >/dev/null 2>&1 && echo -en "fd\n$(fd --version)\n\n"
 command -v bandwhich >/dev/null 2>&1 && echo -en "bandwhich\n$(bandwhich --version)\n\n"
+command -v bat >/dev/null 2>&1 && echo -en "bat\n$(bat --version)\n\n"
 command -v exa >/dev/null 2>&1 && echo -en "exa\n$(exa --version)\n\n"
-
+command -v fd >/dev/null 2>&1 && echo -en "fd\n$(fd --version)\n\n"
+command -v xsv >/dev/null 2>&1 && echo -en "xsv\n$(xsv --version)\n\n"
 yes_or_no "Stop installation?" && exit 0
 
 info "bat"

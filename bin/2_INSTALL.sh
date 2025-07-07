@@ -12,7 +12,7 @@ dpkg --configure -a
 apt-get update -qq
 apt-get upgrade -yq
 
-info 'Installing'
+info 'Installing basic packages'
 
 LC_ALL=en_US.UTF-8 add-apt-repository -y ppa:git-core/ppa
 apt-get install -y apache2 apache2-dev curl dkms git-core gitk haveged htop iptables \
@@ -31,8 +31,8 @@ update-rc.d haveged defaults
 locale-gen en_US.UTF-8
 
 if [ ! -d "/etc/webmin" ]; then
-  info 'Installing Webmin'
-  wget -O /tmp/webmin.deb http://prdownloads.sourceforge.net/webadmin/webmin_2.301_all.deb
+  info 'Installing Webmin 2.402'
+  wget -O /tmp/webmin.deb http://prdownloads.sourceforge.net/webadmin/webmin_2.402_all.deb
   dpkg -i /tmp/webmin.deb
   apt-get install -fqq
 fi
