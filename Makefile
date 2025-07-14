@@ -25,20 +25,10 @@ info:
 	@echo ""
 	@echo "\e${B}go${R}\t - Go (online)"
 	@echo "\e${B}goapps${R}\t - Go apps (repo)"
-	@echo ""
 	@echo "\e${B}rust${R}\t - Rust (online)"
 	@echo "\e${B}rustapps${R} - Rust apps (repo)"
-	@echo ""
 	@echo "\e${B}ruby${R}\t - Ruby (snap)"
-	@echo "\e${B}docs${R}\t - build documentation"
 	@echo ""
-
-docs:
-ifneq ($(strip $(has_docker)),)
-	@find . -maxdepth 1 -iname "*.md" -exec echo "converting {} to ADOC" \; -exec docker run --rm -v "$$(pwd)":/data pandoc/core -f markdown -t asciidoc -i "{}" -o "{}.adoc" \;
-	@find . -maxdepth 1 -iname "*.adoc" -exec echo "converting {} to PDF" \; -exec docker run --rm -v "$$(pwd)":/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf -a allow-uri-read -a icons=font -a icon-set=fas -d book "{}" \;
-	@find . -maxdepth 1 -iname "*.adoc" -delete
-endif
 
 go:
 	@sudo bash ./bin/go.sh

@@ -7,4 +7,4 @@ BitBucket: [https://bitbucket.org/gscloud/ubuntu_server_installer]
 
 * **make** -> CLI help
 
-Author: Fred Brooker 💌 <git@gscloud.cz>
+Author: Fred Brooker 💌 <git@gscloud.cz> ⛅️ GS Cloud Ltd. [https://gscloud.cz](https://gscloud.cz)
