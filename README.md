@@ -1,4 +1,4 @@
-# Ubuntu Server Installer
+# ♥️ Ubuntu Server Installer
 
 Github: [https://github.com/GSCloud/ubuntu_server_installer]  
 BitBucket: [https://bitbucket.org/gscloud/ubuntu_server_installer]
