@@ -17,7 +17,7 @@ info 'Installing basic packages'
 LC_ALL=en_US.UTF-8 add-apt-repository -y ppa:git-core/ppa
 apt-get install -y apache2 apache2-dev curl dkms git-core gitk haveged htop iptables \
   language-pack-en language-pack-en-base man mc nano ntp openssl p7zip software-properties-common \
-  traceroute tree ufw whois
+  traceroute tree ufw whois jq parallel rename
 
 info 'Updating APT'
 
