@@ -31,8 +31,8 @@ update-rc.d haveged defaults
 locale-gen en_US.UTF-8
 
 if [ ! -d "/etc/webmin" ]; then
-  info 'Installing Webmin 2.630'
-  wget -O /tmp/webmin.deb http://prdownloads.sourceforge.net/webadmin/webmin_2.630_all.deb
+  info 'Installing Webmin 2.641'
+  wget -O /tmp/webmin.deb http://prdownloads.sourceforge.net/webadmin/webmin_2.641_all.deb
   dpkg -i /tmp/webmin.deb
   apt-get install -fqq
 fi

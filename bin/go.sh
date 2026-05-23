@@ -11,13 +11,7 @@ V="go1.26.3"
 
 info "Downloading $V\n"
 
-echo "- waiting for 3 s"
-echo -en "."
-sleep 1
-echo -en "."
-sleep 1
-echo -en "."
-sleep 1
+echo "- waiting for 3 s" && echo -en "." && sleep 1 && echo -en "." && sleep 1 && echo -en "." && sleep 1
 
 T="/tmp/$V.tar.gz"
 if [ ! -f "$T" ]; then
