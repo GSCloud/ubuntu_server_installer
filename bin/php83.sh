@@ -6,9 +6,10 @@ dir="$(dirname "$0")"
 
 if [ "$(id -u)" != "0" ]; then fail "This script must be run as root!"; fi
 
-apt-get install -yq software-properties-common language-pack-en-base
-LC_ALL=en_US.UTF-8 add-apt-repository -y ppa:ondrej/php
-LC_ALL=en_US.UTF-8 add-apt-repository -y ppa:ondrej/apache2
+apt-get install -yq software-properties-common language-pack-en-base lsb-release ca-certificates curl
+curl -sSLo /tmp/debsuryorg-archive-keyring.deb https://packages.sury.org/debsuryorg-archive-keyring.deb
+dpkg -i /tmp/debsuryorg-archive-keyring.deb
+sh -c 'echo "deb [signed-by=/usr/share/keyrings/debsuryorg-archive-keyring.gpg] https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list'
 apt-get update -yq
 
 info 'Installing PHP 8.3'
